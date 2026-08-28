@@ -1,4 +1,4 @@
 registration_id,name,email,phone,organization,location,participant_type,area_of_interest,experience_level,qiskit_experience,expectations,referral_source,consent_terms,consent_updates,status,created_at
-QFF-250203,string,user@example.com,4432567,string,string,student,string,beginner,string,string,string,True,True,pending,2026-08-27T13:19:47.721786+00:00
-QFF-577409,Suranjan Nandi,surnandi@in.ibm.com,+916291128949,AMITY UNIVERSITY,"KOLKATA, India",professional,Quantum Algorithms,intermediate,basic,Good Thanks!,College,True,False,pending,2026-08-27T18:01:13.805603+00:00
-QFF-545850,Suranjan Nandi,suranjan_nandi@yahoo.com,+916291128949,AMITY UNIVERSITY KOLKATA,"KOLKATA, India",researcher,"Quantum Algorithms, Quantum Machine Learning",intermediate,intermediate,Good thanks!,College,True,False,pending,2026-08-28T09:56:50.297547+00:00
+QFF-250203,string,user@example.com,4432567,string,string,student,string,beginner,string,string,string,True,True,cancelled,2026-08-27T13:19:47.721786+00:00
+QFF-577409,Suranjan Nandi,surnandi@in.ibm.com,+916291128949,AMITY UNIVERSITY,"KOLKATA, India",professional,Quantum Algorithms,intermediate,basic,Good Thanks!,College,True,False,waitlisted,2026-08-27T18:01:13.805603+00:00
+QFF-545850,Suranjan Nandi,suranjan_nandi@yahoo.com,+916291128949,AMITY UNIVERSITY KOLKATA,"KOLKATA, India",researcher,"Quantum Algorithms, Quantum Machine Learning",intermediate,intermediate,Good thanks!,College,True,False,approved,2026-08-28T09:56:50.297547+00:00

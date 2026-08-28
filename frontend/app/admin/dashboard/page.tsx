@@ -25,7 +25,9 @@ export default function AdminDashboard() {
   const fetchRegistrations = async () => {
     try {
       const data = await adminApi.getRegistrations();
-      setRegistrations(data);
+      // Backend returns { items: RegistrationDetail[], total: number }
+      const list = Array.isArray(data) ? data : (data?.items ?? []);
+      setRegistrations(list);
     } catch (err: any) {
       if (err.response?.status === 401) {
         localStorage.removeItem('admin_token');
@@ -117,7 +119,7 @@ export default function AdminDashboard() {
         )}
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
+        <div className="grid md:grid-cols-5 gap-6 mb-8">
           <div className="bg-white rounded-xl shadow p-6">
             <div className="text-3xl font-bold text-purple-600 mb-1">
               {registrations.length}
@@ -126,15 +128,21 @@ export default function AdminDashboard() {
           </div>
           <div className="bg-white rounded-xl shadow p-6">
             <div className="text-3xl font-bold text-green-600 mb-1">
-              {registrations.filter((r) => r.status === 'confirmed').length}
+              {registrations.filter((r) => r.status === 'approved').length}
             </div>
-            <p className="text-gray-600">Confirmed</p>
+            <p className="text-gray-600">Approved</p>
           </div>
           <div className="bg-white rounded-xl shadow p-6">
             <div className="text-3xl font-bold text-yellow-600 mb-1">
               {registrations.filter((r) => r.status === 'pending').length}
             </div>
             <p className="text-gray-600">Pending</p>
+          </div>
+          <div className="bg-white rounded-xl shadow p-6">
+            <div className="text-3xl font-bold text-blue-600 mb-1">
+              {registrations.filter((r) => r.status === 'waitlisted').length}
+            </div>
+            <p className="text-gray-600">Waitlisted</p>
           </div>
           <div className="bg-white rounded-xl shadow p-6">
             <div className="text-3xl font-bold text-red-600 mb-1">
@@ -164,7 +172,8 @@ export default function AdminDashboard() {
               >
                 <option value="all">All Status</option>
                 <option value="pending">Pending</option>
-                <option value="confirmed">Confirmed</option>
+                <option value="approved">Approved</option>
+                <option value="waitlisted">Waitlisted</option>
                 <option value="cancelled">Cancelled</option>
               </select>
               <button
@@ -229,10 +238,12 @@ export default function AdminDashboard() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                       <span
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          reg.status === 'confirmed'
+                          reg.status === 'approved'
                             ? 'bg-green-100 text-green-800'
                             : reg.status === 'pending'
                             ? 'bg-yellow-100 text-yellow-800'
+                            : reg.status === 'waitlisted'
+                            ? 'bg-blue-100 text-blue-800'
                             : 'bg-red-100 text-red-800'
                         }`}
                       >
@@ -248,7 +259,8 @@ export default function AdminDashboard() {
                         className="px-2 py-1 border border-gray-300 rounded text-xs focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       >
                         <option value="pending">Pending</option>
-                        <option value="confirmed">Confirmed</option>
+                        <option value="approved">Approved</option>
+                        <option value="waitlisted">Waitlisted</option>
                         <option value="cancelled">Cancelled</option>
                       </select>
                     </td>
