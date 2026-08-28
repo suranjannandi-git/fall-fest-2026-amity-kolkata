@@ -6,11 +6,7 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Passionate about quantum computing and community building.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
       name: "Technical Lead",
@@ -18,11 +14,7 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Experienced in organizing technical workshops and hackathons.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
       name: "Content Lead",
@@ -30,11 +22,7 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Creating engaging content to make quantum computing accessible.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
       name: "Logistics Lead",
@@ -42,11 +30,7 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Ensuring smooth operations and excellent participant experience.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
       name: "Outreach Lead",
@@ -54,11 +38,7 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Building partnerships and expanding our quantum community.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     },
     {
       name: "Design Lead",
@@ -66,20 +46,18 @@ export default function Team() {
       organization: "University Name",
       image: "/placeholder-team.jpg",
       bio: "Creating visual identity and user experience for the event.",
-      social: {
-        linkedin: "#",
-        github: "#",
-        twitter: "#"
-      }
+      social: { linkedin: "#", github: "#", twitter: "#" }
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f3f3f3]">
       {/* Header */}
-      <section className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
+      <section className="bg-[#0f385f] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h1>
+          <p className="text-[#dba921] font-semibold uppercase tracking-widest mb-2 text-sm">Qiskit Fall Fest 2026</p>
+          <h1 className="text-4xl md:text-5xl font-black mb-2">Our Team</h1>
+          <div className="w-16 h-1 bg-[#dba921] mb-4"></div>
           <p className="text-xl text-gray-200 max-w-3xl">
             Meet the dedicated team of students and volunteers making Qiskit Fall Fest 2026 possible.
           </p>
@@ -93,12 +71,12 @@ export default function Team() {
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+                className="bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border-t-4 border-[#dba921]"
               >
                 {/* Member Image Placeholder */}
-                <div className="h-64 bg-gradient-to-br from-cyan-400 via-purple-400 to-pink-400 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <div className="h-56 bg-[#0f385f] flex items-center justify-center">
+                  <div className="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center">
+                    <svg className="w-14 h-14 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -106,17 +84,17 @@ export default function Team() {
 
                 {/* Member Info */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-purple-600 font-semibold mb-1">{member.role}</p>
-                  <p className="text-gray-600 text-sm mb-4">{member.organization}</p>
-                  
+                  <h3 className="text-2xl font-black text-[#0f385f] mb-1">{member.name}</h3>
+                  <p className="text-[#dba921] font-bold mb-1">{member.role}</p>
+                  <p className="text-gray-500 text-sm mb-4">{member.organization}</p>
+
                   <p className="text-gray-700 mb-4">{member.bio}</p>
 
                   {/* Social Links */}
                   <div className="flex space-x-3">
                     <a
                       href={member.social.linkedin}
-                      className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-colors"
+                      className="w-10 h-10 bg-[#f3f3f3] rounded flex items-center justify-center text-[#0f385f] hover:bg-[#0f385f] hover:text-white transition-colors"
                       aria-label="LinkedIn"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -125,7 +103,7 @@ export default function Team() {
                     </a>
                     <a
                       href={member.social.github}
-                      className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-800 hover:text-white transition-colors"
+                      className="w-10 h-10 bg-[#f3f3f3] rounded flex items-center justify-center text-[#0f385f] hover:bg-gray-800 hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -134,7 +112,7 @@ export default function Team() {
                     </a>
                     <a
                       href={member.social.twitter}
-                      className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors"
+                      className="w-10 h-10 bg-[#f3f3f3] rounded flex items-center justify-center text-[#0f385f] hover:bg-[#006690] hover:text-white transition-colors"
                       aria-label="Twitter"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -152,14 +130,15 @@ export default function Team() {
       {/* Join Us */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Want to Join Our Team?</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              We're always looking for passionate volunteers to help make Qiskit Fall Fest even better. Get in touch if you'd like to contribute!
+          <div className="bg-[#0f385f] rounded p-8 md:p-12 text-white">
+            <h2 className="text-3xl font-black mb-4">Want to Join Our Team?</h2>
+            <div className="w-16 h-1 bg-[#dba921] mx-auto mb-6"></div>
+            <p className="text-lg text-gray-200 mb-6">
+              We&apos;re always looking for passionate volunteers to help make Qiskit Fall Fest even better. Get in touch if you&apos;d like to contribute!
             </p>
             <a
               href="mailto:team@qiskitfallfest.org"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-block px-8 py-4 bg-[#dba921] text-[#0f385f] rounded font-bold hover:bg-[#fecc00] transition-all duration-200 shadow-lg uppercase tracking-wide"
             >
               Contact Us
             </a>
@@ -168,10 +147,10 @@ export default function Team() {
       </section>
 
       {/* Note */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-[#f3f3f3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-            <p className="text-sm text-blue-700">
+          <div className="bg-[#006690]/10 border-l-4 border-[#006690] p-4 rounded">
+            <p className="text-sm text-[#006690]">
               <strong>Note:</strong> Team member profiles are placeholders. Actual team information will be added once finalized.
             </p>
           </div>

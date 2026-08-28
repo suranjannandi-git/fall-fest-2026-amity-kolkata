@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white">
+    <footer className="bg-[#0f385f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Qiskit Fall Fest 2026</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#dba921]">Qiskit Fall Fest 2026</h3>
             <p className="text-gray-300 text-sm">
               A global celebration of quantum computing, bringing together students, researchers, and enthusiasts to explore the quantum world.
             </p>
@@ -15,25 +15,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#dba921]">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/resources" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="/speakers" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/speakers" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Speakers
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/team" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Our Team
                 </Link>
               </li>
@@ -42,38 +42,38 @@ export default function Footer() {
 
           {/* More Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">More</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#dba921]">More</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/supporters" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/supporters" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Supporters
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/register" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/register" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Register
                 </Link>
               </li>
               <li>
-                <Link href="/admin" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <Link href="/admin" className="text-gray-300 hover:text-[#dba921] transition-colors">
                   Admin
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Connect */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Connect</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#dba921]">Connect</h3>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
+                className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-[#dba921] hover:text-[#0f385f] transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
+                className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-[#dba921] hover:text-[#0f385f] transition-colors"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-500 transition-colors"
+                className="w-10 h-10 bg-white/10 rounded flex items-center justify-center hover:bg-[#dba921] hover:text-[#0f385f] transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-300">
+        <div className="border-t border-[#dba921]/30 mt-8 pt-8 text-center text-sm text-gray-300">
           <p>&copy; 2026 Qiskit Fall Fest. All rights reserved.</p>
         </div>
       </div>
