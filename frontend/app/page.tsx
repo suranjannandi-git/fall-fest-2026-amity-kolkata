@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-bg text-white min-h-[85vh] flex flex-col justify-end">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-16 pt-160">
-          <p className="text-[#dba921] font-semibold uppercase tracking-widest mb-4 text-base">
+          <p className="text-[#b8860b] font-bold uppercase tracking-widest mb-4 text-lg">
             Amity University Kolkata Presents
           </p>
           <h1 className="text-4xl md:text-6xl font-black mb-6 text-black leading-tight">
