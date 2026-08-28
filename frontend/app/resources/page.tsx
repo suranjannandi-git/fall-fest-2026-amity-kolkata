@@ -4,16 +4,16 @@ export default function Resources() {
       category: "Quantum Computing Fundamentals",
       items: [
         {
-          title: "Introduction to Quantum Computing",
-          description: "Learn the basics of quantum mechanics and quantum computing principles.",
-          link: "https://qiskit.org/learn/intro-qc-qh",
+          title: "Basics of quantum information",
+          description: "Learn Single System, Multiple System, Quantum Circuit and Entanglemeent",
+          link: "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information",
           type: "Course"
         },
         {
-          title: "Quantum Computing for the Very Curious",
-          description: "An interactive introduction to quantum computing by Andy Matuschak and Michael Nielsen.",
-          link: "https://quantum.country/qcvc",
-          type: "Interactive"
+          title: "Use a quantum computer today",
+          description: "Start using a quantum computer immediately, and learn the basic principles of quantum computing along the way.",
+          link: "https://quantum.cloud.ibm.com/learning/en/courses/use-a-qc-today",
+          type: "Course"
         }
       ]
     },
