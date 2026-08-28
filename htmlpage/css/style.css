@@ -320,9 +320,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  background-image: url('../images/Fall Fest - Background.png');
+  background-image: url('../images/Amity University.png');
   background-attachment: fixed;
-  background-size: cover;
+  /* background-size: auto; */
+  background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   color: #000;
@@ -338,15 +339,16 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   padding-top: 8rem;
   text-align: center;
+  transform: translateY(200px);
 }
 
 .hero-eyebrow {
-  color: #b8860b;
-  font-weight: 700;
-  font-size: 1rem;
+  color: #1b3246;
+  font-weight: 1000;
+  font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 1rem;
@@ -354,12 +356,28 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: #000;
   margin-bottom: 1.25rem;
+}
+
+.hero-text-box {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+
+  /* translucent background */
+  background: rgba(255, 255, 255, 0.15);
+
+  /* blur the background behind the box */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* subtle separation from the image */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero-divider {
