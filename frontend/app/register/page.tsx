@@ -127,7 +127,7 @@ export default function Register() {
                       type="text"
                       id="name"
                       className={inputClass}
-                      placeholder="John Doe"
+                      placeholder="Add your full name here"
                     />
                     {errors.name && (
                       <p className="mt-1 text-sm text-[#9f1f30] font-semibold">{errors.name.message}</p>
@@ -143,7 +143,7 @@ export default function Register() {
                       type="email"
                       id="email"
                       className={inputClass}
-                      placeholder="john@example.com"
+                      placeholder="email address"
                     />
                     {errors.email && (
                       <p className="mt-1 text-sm text-[#9f1f30] font-semibold">{errors.email.message}</p>
@@ -182,7 +182,7 @@ export default function Register() {
                       type="text"
                       id="organization"
                       className={inputClass}
-                      placeholder="University Name or Company"
+                      placeholder="Amity University Kolkata"
                     />
                     {errors.organization && (
                       <p className="mt-1 text-sm text-[#9f1f30] font-semibold">{errors.organization.message}</p>
@@ -199,7 +199,7 @@ export default function Register() {
                         type="text"
                         id="city"
                         className={inputClass}
-                        placeholder="New York"
+                        placeholder="Kolkata"
                       />
                       {errors.city && (
                         <p className="mt-1 text-sm text-[#9f1f30] font-semibold">{errors.city.message}</p>
@@ -215,7 +215,7 @@ export default function Register() {
                         type="text"
                         id="country"
                         className={inputClass}
-                        placeholder="United States"
+                        placeholder="India"
                       />
                       {errors.country && (
                         <p className="mt-1 text-sm text-[#9f1f30] font-semibold">{errors.country.message}</p>
