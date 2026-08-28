@@ -11,7 +11,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Qiskit Fall Fest 2026 - Global Quantum Computing Celebration",
+  title: "Qiskit Fall Fest 2026 - Amity Kolkata University",
   description: "Join the global celebration of quantum computing. Learn, explore, and connect with the quantum community at Qiskit Fall Fest 2026.",
   keywords: ["Qiskit", "Quantum Computing", "Fall Fest", "IBM Quantum", "Quantum Education"],
 };
