@@ -1,6 +1,6 @@
 .env
+.bob
 .venv/
 venv/
-__pycache__/
-x.git/
 .DS_Store
+__pycache__/
