@@ -354,24 +354,9 @@ docker-compose up --build
 
 ## 📄 License
 
-This project is part of Qiskit Fall Fest 2026.
+This project is part of Qiskit Fall Fest 2026 - Amity University Kolkata.
 
 ## 👥 Team
 
 Organized by passionate quantum computing enthusiasts and students.
 
-## 📧 Contact
-
-For questions or support:
-- Email: team@qiskitfallfest.org
-- Website: [Event Website]
-
-## 🙏 Acknowledgments
-
-- IBM Quantum for Qiskit
-- All speakers and supporters
-- The quantum computing community
-
----
-
-Built with ❤️ for the quantum computing community
