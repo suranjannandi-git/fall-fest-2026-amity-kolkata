@@ -123,17 +123,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div className="text-center p-6 bg-[#0f385f] rounded shadow-md">
-              <div className="text-4xl font-black text-[#dba921] mb-2">20+</div>
+              <div className="text-4xl font-black text-[#dba921] mb-2">10+</div>
               <p className="text-white font-semibold">Expert Speakers</p>
             </div>
 
             <div className="text-center p-6 bg-[#006690] rounded shadow-md">
-              <div className="text-4xl font-black text-[#dba921] mb-2">50+</div>
+              <div className="text-4xl font-black text-[#dba921] mb-2">20+</div>
               <p className="text-white font-semibold">Workshops &amp; Sessions</p>
             </div>
 
             <div className="text-center p-6 bg-[#9f1f30] rounded shadow-md">
-              <div className="text-4xl font-black text-[#fecc00] mb-2">500+</div>
+              <div className="text-4xl font-black text-[#fecc00] mb-2">50+</div>
               <p className="text-white font-semibold">Participants Expected</p>
             </div>
 
