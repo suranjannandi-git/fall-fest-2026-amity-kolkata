@@ -34,7 +34,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/team" className="text-gray-300 hover:text-[#dba921] transition-colors">
-                  Our Team
+                  Organizers
                 </Link>
               </li>
             </ul>

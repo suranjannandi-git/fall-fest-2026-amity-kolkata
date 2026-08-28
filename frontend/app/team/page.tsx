@@ -56,7 +56,7 @@ export default function Team() {
       <section className="bg-[#0f385f] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#dba921] font-semibold uppercase tracking-widest mb-2 text-sm">Qiskit Fall Fest 2026</p>
-          <h1 className="text-4xl md:text-5xl font-black mb-2">Our Team</h1>
+          <h1 className="text-4xl md:text-5xl font-black mb-2">Organizers</h1>
           <div className="w-16 h-1 bg-[#dba921] mb-4"></div>
           <p className="text-xl text-gray-200 max-w-3xl">
             Meet the dedicated team of students and volunteers making Qiskit Fall Fest 2026 possible.
@@ -131,7 +131,7 @@ export default function Team() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-[#0f385f] rounded p-8 md:p-12 text-white">
-            <h2 className="text-3xl font-black mb-4">Want to Join Our Team?</h2>
+            <h2 className="text-3xl font-black mb-4">Want to Join Organizers?</h2>
             <div className="w-16 h-1 bg-[#dba921] mx-auto mb-6"></div>
             <p className="text-lg text-gray-200 mb-6">
               We&apos;re always looking for passionate volunteers to help make Qiskit Fall Fest even better. Get in touch if you&apos;d like to contribute!

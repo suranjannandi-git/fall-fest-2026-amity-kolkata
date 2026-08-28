@@ -27,7 +27,7 @@ Modern, responsive Next.js frontend for the Qiskit Fall Fest 2026 event website.
 - **Home** (`/`) - Event overview, objectives, and highlights
 - **Resources** (`/resources`) - Learning materials and tutorials
 - **Speakers** (`/speakers`) - Speaker profiles and sessions
-- **Our Team** (`/team`) - Organizing team members
+- **Organizers** (`/team`) - Organizing team members
 - **Supporters** (`/supporters`) - Sponsors and partners
 - **About Us** (`/about`) - Organization vision and mission
 - **Register** (`/register`) - Event registration form

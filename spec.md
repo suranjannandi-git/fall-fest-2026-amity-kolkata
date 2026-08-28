@@ -17,7 +17,7 @@ Create these static frontend pages:
 * **Home** — hero, event information, objectives, goal, highlights, registration CTA
 * **Resources** — quantum computing, Qiskit, QML, tutorials, courses and useful links
 * **Speakers** — speaker profiles and sessions
-* **Our Team** — organizing team
+* **Organizers** — organizing team
 * **Supporters** — supporting organizations/logos
 * **About Us** — organization, vision and mission
 * **Register** — registration form

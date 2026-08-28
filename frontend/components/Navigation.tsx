@@ -11,7 +11,7 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/resources', label: 'Resources' },
     { href: '/speakers', label: 'Speakers' },
-    { href: '/team', label: 'Our Team' },
+    { href: '/team', label: 'Organizers' },
     { href: '/supporters', label: 'Supporters' },
     { href: '/about', label: 'About Us' },
     { href: '/register', label: 'Register', highlight: true },
