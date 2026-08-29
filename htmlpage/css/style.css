@@ -135,7 +135,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   align-items: center;
   gap: 0.6rem;  
   text-decoration: none;
-  margin-left: -40px;
+  margin-left: 0px;
 }
 .nav-logo-img {
   height: 40px;
