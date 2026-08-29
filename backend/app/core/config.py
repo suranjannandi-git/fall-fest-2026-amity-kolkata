@@ -11,6 +11,13 @@ class Settings(BaseSettings):
         default_factory=lambda: Path(__file__).resolve().parents[3] / "data",
         validation_alias=AliasChoices("DATA_DIR", "data_dir"),
     )
+    # Comma-separated list of allowed CORS origins.
+    # Defaults to localhost for local development.
+    # Set CORS_ORIGINS=http://your-alb-dns in production.
+    cors_origins: str = Field(
+        default="http://localhost:3000,http://127.0.0.1:3000",
+        validation_alias=AliasChoices("CORS_ORIGINS", "cors_origins"),
+    )
     registrations_file: Path | None = Field(
         default=None,
         validation_alias=AliasChoices("REGISTRATIONS_FILE", "registrations_file"),

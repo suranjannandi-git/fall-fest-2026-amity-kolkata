@@ -1,0 +1,124 @@
+{
+  "family": "qff-app",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+    "operatingSystemFamily": "LINUX",
+    "cpuArchitecture": "ARM64"
+  },
+  "executionRoleArn": "EXECUTION_ROLE_ARN_PLACEHOLDER",
+  "taskRoleArn": "TASK_ROLE_ARN_PLACEHOLDER",
+  "volumes": [
+    {
+      "name": "qff-data",
+      "efsVolumeConfiguration": {
+        "fileSystemId": "EFS_ID_PLACEHOLDER",
+        "rootDirectory": "/",
+        "transitEncryption": "ENABLED",
+        "authorizationConfig": {
+          "accessPointId": "ACCESS_POINT_ID_PLACEHOLDER",
+          "iam": "ENABLED"
+        }
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "BACKEND_IMAGE_URI_PLACEHOLDER",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        { "name": "JWT_ALGORITHM",                    "value": "HS256" },
+        { "name": "JWT_EXPIRE_MINUTES",               "value": "120" },
+        { "name": "REGISTRATION_RATE_LIMIT",          "value": "5" },
+        { "name": "REGISTRATION_RATE_WINDOW_SECONDS", "value": "3600" },
+        { "name": "DATA_DIR",                         "value": "/app/data" },
+        { "name": "CORS_ORIGINS",                     "value": "ALB_URL_PLACEHOLDER" }
+      ],
+      "secrets": [
+        {
+          "name": "ADMIN_USERNAME",
+          "valueFrom": "SECRETS_ARN_PLACEHOLDER/admin_username"
+        },
+        {
+          "name": "ADMIN_PASSWORD_HASH",
+          "valueFrom": "SECRETS_ARN_PLACEHOLDER/admin_password_hash"
+        },
+        {
+          "name": "JWT_SECRET_KEY",
+          "valueFrom": "SECRETS_ARN_PLACEHOLDER/jwt_secret_key"
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "qff-data",
+          "containerPath": "/app/data",
+          "readOnly": false
+        }
+      ],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"],
+        "interval": 30,
+        "timeout": 10,
+        "retries": 3,
+        "startPeriod": 40
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/qff/backend",
+          "awslogs-region": "AWS_REGION_PLACEHOLDER",
+          "awslogs-stream-prefix": "backend",
+          "awslogs-create-group": "true"
+        }
+      }
+    },
+    {
+      "name": "frontend",
+      "image": "FRONTEND_IMAGE_URI_PLACEHOLDER",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        { "name": "NODE_ENV",                "value": "production" },
+        { "name": "NEXT_TELEMETRY_DISABLED", "value": "1" },
+        { "name": "PORT",                    "value": "3000" },
+        { "name": "HOSTNAME",                "value": "0.0.0.0" }
+      ],
+      "dependsOn": [
+        {
+          "containerName": "backend",
+          "condition": "HEALTHY"
+        }
+      ],
+      "healthCheck": {
+        "command": ["CMD-SHELL", "node -e \"require('http').get('http://localhost:3000', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})\""],
+        "interval": 30,
+        "timeout": 10,
+        "retries": 3,
+        "startPeriod": 60
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/qff/frontend",
+          "awslogs-region": "AWS_REGION_PLACEHOLDER",
+          "awslogs-stream-prefix": "frontend",
+          "awslogs-create-group": "true"
+        }
+      }
+    }
+  ]
+}
