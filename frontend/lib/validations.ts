@@ -8,14 +8,14 @@ export const registrationSchema = z.object({
   city: z.string().min(2, 'City is required').max(100, 'City name is too long'),
   country: z.string().min(2, 'Country is required').max(100, 'Country name is too long'),
   participant_type: z.enum(['student', 'professional', 'researcher', 'educator', 'other'], {
-    errorMap: () => ({ message: 'Please select a participant type' }),
+    error: 'Please select a participant type',
   }),
   area_of_interest: z.array(z.string()).min(1, 'Please select at least one area of interest'),
   experience_level: z.enum(['beginner', 'intermediate', 'advanced'], {
-    errorMap: () => ({ message: 'Please select your experience level' }),
+    error: 'Please select your experience level',
   }),
   qiskit_experience: z.enum(['none', 'basic', 'intermediate', 'advanced'], {
-    errorMap: () => ({ message: 'Please select your Qiskit experience level' }),
+    error: 'Please select your Qiskit experience level',
   }),
   expectations: z.string().min(10, 'Please provide at least 10 characters').max(1000, 'Expectations are too long'),
   referral_source: z.string().min(2, 'Please tell us how you heard about us').max(200, 'Referral source is too long'),

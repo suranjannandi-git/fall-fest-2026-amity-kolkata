@@ -89,7 +89,7 @@ export default function Team() {
                   <p className="text-[#dba921] font-bold mb-1">{member.role}</p>
                   <p className="text-gray-500 text-sm mb-4">{member.organization}</p>
 
-                  <p className="text-gray-700 mb-4">{member.bio}</p>
+                  {('bio' in member) && <p className="text-gray-700 mb-4">{(member as any).bio}</p>}
 
                   {/* Social Links */}
                   {/* <div className="flex space-x-3"> */}

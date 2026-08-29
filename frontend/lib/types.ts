@@ -14,7 +14,7 @@ export interface Registration {
   referral_source: string;
   consent_data_processing: boolean;
   consent_communications: boolean;
-  status?: 'pending' | 'confirmed' | 'cancelled';
+  status?: 'pending' | 'confirmed' | 'cancelled' | 'approved' | 'waitlisted';
   registered_at?: string;
 }
 
