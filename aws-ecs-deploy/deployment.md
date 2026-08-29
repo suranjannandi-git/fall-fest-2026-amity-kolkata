@@ -18,7 +18,7 @@
 
 **Admin credentials:**
 - Username: `admin`
-- Password: `Admin@213`
+- Password: ``
 
 > ⚠️ **Keep this file private** — do not commit to a public repository.
 
