@@ -682,6 +682,40 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .organizer-role { color: var(--amity-gold); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.15rem; }
 .organizer-org  { color: var(--clr-muted); font-size: 0.8rem; }
 
+.join-container {
+  max-width: 896px;
+  margin: 4rem auto 0;
+  text-align: center;
+  color: #ffffff;
+  
+  background: var(--amity-teal);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background: #dba921;
+  color: #0f385f;
+  border: 3px solid #dba921;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  background: #fecc00;
+  border-color: #fecc00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+
 /* ── Supporters ── */
 .supporter-cta-box {
   background: var(--amity-navy);
@@ -691,6 +725,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   color: var(--clr-white);
   max-width: 860px;
   margin-inline: auto;
+  margin-top: 2rem;
 }
 .supporter-cta-box h2 { font-size: 1.75rem; font-weight: 900; margin-bottom: 0.5rem; }
 .supporter-cta-box hr { width: 64px; height: 3px; background: var(--amity-gold); border: none; margin: 0.75rem auto 1.5rem; }
