@@ -983,6 +983,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 .footer-social a:hover { background: var(--amity-gold); color: var(--amity-navy); }
 .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+.footer-social-img { width: 26px; height: 26px; object-fit: contain; border-radius: 2px; }
 .footer-bottom {
   border-top: 1px solid rgba(219,169,33,0.25);
   padding-top: 1.5rem;
