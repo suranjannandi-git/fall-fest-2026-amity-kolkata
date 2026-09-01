@@ -97,4 +97,29 @@
   /* Run once on load */
   updateActiveLink();
 
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isOpen   = btn.getAttribute('aria-expanded') === 'true';
+      const answer   = btn.nextElementSibling;
+
+      /* Close all others */
+      document.querySelectorAll('.faq-question').forEach((other) => {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          const otherAnswer = other.nextElementSibling;
+          otherAnswer.setAttribute('hidden', '');
+        }
+      });
+
+      /* Toggle clicked item */
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      if (isOpen) {
+        answer.setAttribute('hidden', '');
+      } else {
+        answer.removeAttribute('hidden');
+      }
+    });
+  });
+
 })();
